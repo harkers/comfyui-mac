@@ -5,14 +5,14 @@
 ---
 
 ## Task 1: Repo scaffold
-- [ ] Create directory structure (`lib/`, `tests/`, `workflows/`, `docs/`)
-- [ ] Write `pyproject.toml` (uv project, Python 3.12)
-- [ ] Write `.gitignore`
-- [ ] Write `custom_nodes.txt` (6-node roster)
-- [ ] Write `models.sha256` skeleton
-- [ ] Write `README.md` skeleton
-- [ ] Create `lib/__init__.py` and workflow placeholder `.gitkeep` files
-- [ ] Verify structure and commit
+- [x] Create directory structure (`lib/`, `tests/`, `workflows/`, `docs/`)
+- [x] Write `pyproject.toml` (uv project, Python 3.12)
+- [x] Write `.gitignore`
+- [x] Write `custom_nodes.txt` (6-node roster)
+- [x] Write `models.sha256` skeleton
+- [x] Write `README.md` skeleton
+- [x] Create `lib/__init__.py` and workflow placeholder `.gitkeep` files
+- [x] Verify structure and commit
 
 **Files created:** 10  
 **Tests:** N/A (scaffold only)

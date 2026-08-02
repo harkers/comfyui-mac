@@ -48,6 +48,7 @@ Do not confuse the plugin config with the Python project. They build independent
 | `~/projects/comfyui-mac` | This repo (code) |
 | `~/comfyui-mac` | **Runtime ComfyUI install** (NOT in repo) |
 | `~/.comfyui-mac/verified` | Stage-1 verification flag file |
+| `scripts/update_todo.py` | Post-commit hook — run `python scripts/update_todo.py <N>` after each task |
 
 ## ComfyUI context
 
