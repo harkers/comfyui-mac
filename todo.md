@@ -66,9 +66,9 @@
 ---
 
 ## Task 6: `install.sh`
-- [ ] Write `install.sh` — preflight, Stage 0, idempotent node/venv setup
-- [ ] Make executable and verify syntax (`bash -n`)
-- [ ] Commit
+- [x] Write `install.sh` — preflight, Stage 0, idempotent node/venv setup
+- [x] Make executable and verify syntax (`bash -n`)
+- [x] Commit
 
 **Note:** Do NOT run for real yet — depends on Tasks 7 & 8
 
