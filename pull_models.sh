@@ -10,12 +10,23 @@ MODELS_DIR="$COMFYUI_HOME/models"
 
 # ---- Configuration ----------------------------------------------------------
 
-# Each entry: "repo_id filename subdir"
+# Each entry is 3 consecutive array elements: repo_id, filename, subdir
 MODELS=(
-    "ByteDance/LatentSync latentsync_unet.pt checkpoints"
-    "city96/HunyuanVideo-gguf hunyuan-video-t2v-720p-Q4_K_M.gguf checkpoints"
-    "Kijai/VEnhancer-fp16 v enhancer_v2-fp16.safetensors checkpoints"
-    "imaginairy/rife-interpolation rife-flownet-4.13.2.safetensors checkpoints"
+    "ByteDance/LatentSync"
+    "latentsync_unet.pt"
+    "checkpoints"
+
+    "city96/HunyuanVideo-gguf"
+    "hunyuan-video-t2v-720p-Q4_K_M.gguf"
+    "checkpoints"
+
+    "Kijai/VEnhancer-fp16"
+    "venhancer_v2-fp16.safetensors"
+    "checkpoints"
+
+    "imaginairy/rife-interpolation"
+    "rife-flownet-4.13.2.safetensors"
+    "checkpoints"
 )
 
 SHA256_FILE="$SCRIPT_DIR/models.sha256"
@@ -36,8 +47,13 @@ if ! python3 -c "import huggingface_hub" 2>/dev/null; then
     pip install huggingface_hub
 fi
 
-for entry in "${MODELS[@]}"; do
-    read -r repo_id filename subdir <<< "$entry"
+i=0
+while [ $i -lt ${#MODELS[@]} ]; do
+    repo_id="${MODELS[$i]}"
+    filename="${MODELS[$((i+1))]}"
+    subdir="${MODELS[$((i+2))]}"
+    i=$((i+3))
+
     target_dir="$MODELS_DIR/$subdir"
     target_path="$target_dir/$filename"
 
