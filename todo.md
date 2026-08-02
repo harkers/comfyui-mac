@@ -42,12 +42,12 @@
 ---
 
 ## Task 4: `lib/api.py` + tests
-- [ ] Write `tests/conftest.py` (shared fixtures)
-- [ ] Write failing tests (`tests/test_api.py`) — 9 tests
-- [ ] Run tests to verify they fail
-- [ ] Write implementation (`lib/api.py`) — ComfyClient + submit_with_retry
-- [ ] Run tests to verify they pass (9 passed)
-- [ ] Commit
+- [x] Write `tests/conftest.py` (shared fixtures)
+- [x] Write failing tests (`tests/test_api.py`) — 9 tests
+- [x] Run tests to verify they fail
+- [x] Write implementation (`lib/api.py`) — ComfyClient + submit_with_retry
+- [x] Run tests to verify they pass (9 passed)
+- [x] Commit
 
 **Interface:** `ComfyClient` (`submit_job`, `poll_status`, `fetch_output`, `interrupt`), `submit_with_retry()`
 
