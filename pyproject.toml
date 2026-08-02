@@ -9,6 +9,7 @@ description = "ComfyUI management toolkit for Apple Silicon"
 requires-python = ">=3.12"
 dependencies = [
     "requests>=2.31.0",
+    "torch>=2.0",
 ]
 
 [project.optional-dependencies]
@@ -30,5 +31,5 @@ line-length = 88
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
 
-[tool.uv]
-python = "3.12"
+[tool.hatch.build.targets.wheel]
+packages = ["lib", "scripts"]
