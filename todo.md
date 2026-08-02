@@ -75,9 +75,9 @@
 ---
 
 ## Task 7: `pull_models.sh`
-- [ ] Write `pull_models.sh` — resumable HF pulls, checksum provenance
-- [ ] Make executable and verify syntax (`bash -n`)
-- [ ] Commit
+- [x] Write `pull_models.sh` — resumable HF pulls, checksum provenance
+- [x] Make executable and verify syntax (`bash -n`)
+- [x] Commit
 
 **Note:** Do NOT run for real yet — depends on Task 6's Stage 0 dirs
 
