@@ -54,12 +54,12 @@
 ---
 
 ## Task 5: `render.py` + tests
-- [ ] Write failing tests (`tests/test_cli.py`) — 7 tests
-- [ ] Run tests to verify they fail
-- [ ] Write implementation (`render.py`) — CLI with four-mode error contract
-- [ ] Run tests to verify they pass (7 passed)
-- [ ] Run full test suite (19 total so far)
-- [ ] Commit
+- [x] Write failing tests (`tests/test_cli.py`) — 7 tests
+- [x] Run tests to verify they fail
+- [x] Write implementation (`render.py`) — CLI with four-mode error contract
+- [x] Run tests to verify they pass (7 passed)
+- [x] Run full test suite (19 total so far)
+- [x] Commit
 
 **Exit codes:** 0=success, 1=not-verified/drifted, 2=not-running, 3=failed-after-starting, 4=timeout
 
