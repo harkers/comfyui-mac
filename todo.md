@@ -20,11 +20,11 @@
 ---
 
 ## Task 2: `lib/preflight.py` + tests
-- [ ] Write failing tests (`tests/test_preflight.py`) — 3 tests
-- [ ] Run tests to verify they fail
-- [ ] Write implementation (`lib/preflight.py`)
-- [ ] Run tests to verify they pass (3 passed)
-- [ ] Commit
+- [x] Write failing tests (`tests/test_preflight.py`) — 3 tests
+- [x] Run tests to verify they fail
+- [x] Write implementation (`lib/preflight.py`)
+- [x] Run tests to verify they pass (3 passed)
+- [x] Commit
 
 **Interface:** `PreflightStatus`, `check_verified_flag()`, `check_mps_available()`, `run_preflight()`
 
