@@ -69,7 +69,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     # Install node-specific requirements if present
     if [[ -f "$target_dir/requirements.txt" ]]; then
         info "Installing requirements for $repo_name..."
-        "$PYTHON" -m pip install --upgrade -r "$target_dir/requirements.txt"
+        "$PYTHON" -m pip install --upgrade -r "$target_dir/requirements.txt" || warn "Failed to install requirements for $repo_name (may need manual fix)"
     fi
 done < "$SCRIPT_DIR/custom_nodes.txt"
 

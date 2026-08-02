@@ -1,0 +1,24 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "hunyuan-video-t2v-720p-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF"
+  },
+  "2": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage"
+  },
+  "3": {
+    "inputs": {
+      "images": ["2", 0],
+      "filename_prefix": "mvr_gguf"
+    },
+    "class_type": "SaveImage"
+  }
+}

@@ -45,13 +45,14 @@ class TestMain:
             assert main(["run", str(wf)]) == EXIT_NOT_VERIFIED
 
     def test_returns_2_when_comfyui_not_running(self, tmp_path):
+        import requests
         wf = tmp_path / "wf.json"
         wf.write_text(json.dumps({"prompt": {}}))
 
         with patch("render.run_preflight", return_value=Mock(ok=True, verified=True, mps=True)):
             with patch("render.ComfyClient") as MockClient:
                 client = MockClient.return_value
-                client.submit_job.side_effect = ConnectionError("refused")
+                client.submit_job.side_effect = requests.exceptions.ConnectionError("refused")
 
                 assert main(["run", str(wf)]) == EXIT_NOT_RUNNING
 
@@ -97,3 +98,21 @@ class TestMain:
 
                 call_args = client.submit_job.call_args[0][0]
                 assert call_args == workflow
+
+    def test_wraps_raw_node_dict(self, tmp_path):
+        """When the file is just raw nodes (no 'prompt' key), wrap it."""
+        raw = {"1": {"class_type": "KSampler"}}
+        wf = tmp_path / "wf.json"
+        wf.write_text(json.dumps(raw))
+
+        with patch("render.run_preflight", return_value=Mock(ok=True, verified=True, mps=True)):
+            with patch("render.ComfyClient") as MockClient:
+                client = MockClient.return_value
+                client.submit_job.return_value = "abc-123"
+                client.poll_status.return_value = {"outputs": {}}
+                client.fetch_output.return_value = []
+
+                main(["run", str(wf)])
+
+                call_args = client.submit_job.call_args[0][0]
+                assert call_args == {"prompt": raw}

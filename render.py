@@ -11,6 +11,8 @@ import sys
 import time
 from pathlib import Path
 
+import requests
+
 from lib.api import ComfyClient
 from lib.preflight import run_preflight
 
@@ -45,13 +47,16 @@ def main(argv: list[str] | None = None) -> int:
 
     # 2. Load workflow
     with args.workflow.open("r", encoding="utf-8") as fh:
-        workflow = json.load(fh)
+        raw = json.load(fh)
+
+    # ComfyUI expects {"prompt": <node dict>}; wrap if the file is raw nodes
+    workflow = raw if "prompt" in raw else {"prompt": raw}
 
     # 3. Submit
     client = ComfyClient(args.url)
     try:
         prompt_id = client.submit_job(workflow)
-    except ConnectionError:
+    except requests.exceptions.ConnectionError:
         print("ComfyUI is not running", file=sys.stderr)
         return EXIT_NOT_RUNNING
     except Exception as exc:  # noqa: BLE001

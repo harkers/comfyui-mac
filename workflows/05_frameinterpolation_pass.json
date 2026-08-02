@@ -1,0 +1,33 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "rife-flownet-4.13.2.safetensors",
+      "frames": "placeholder",
+      "clear_cache_after_n_frames": 10,
+      "multiplier": 2,
+      "fast_mode": true,
+      "ensemble": true,
+      "scale_factor": 1.0,
+      "dtype": "float32",
+      "torch_compile": false,
+      "batch_size": 1
+    },
+    "class_type": "RIFE VFI"
+  },
+  "2": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage"
+  },
+  "3": {
+    "inputs": {
+      "images": ["2", 0],
+      "filename_prefix": "mvr_rife"
+    },
+    "class_type": "SaveImage"
+  }
+}

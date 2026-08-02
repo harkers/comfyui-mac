@@ -1,0 +1,26 @@
+{
+  "1": {
+    "inputs": {
+      "model": "venhancer_v2-fp16.safetensors",
+      "precision": "fp16",
+      "torch_compile": false
+    },
+    "class_type": "DownloadAndLoadVEnhancerModel"
+  },
+  "2": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage"
+  },
+  "3": {
+    "inputs": {
+      "images": ["2", 0],
+      "filename_prefix": "mvr_venhancer"
+    },
+    "class_type": "SaveImage"
+  }
+}

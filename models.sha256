@@ -1,12 +1,4 @@
-# SHA-256 checksums for model files
-# Downloaded via pull_models.sh (~25GB total)
-# Format: <sha256sum>  <filename>
-# Populate after download completes
-
-# LatentSync (ByteDance/LatentSync)
-
-# HunyuanVideo-GGUF (city96/HunyuanVideo-gguf)
-
-# VEnhancer (Kijai/VEnhancer-fp16)
-
-# RIFE (imaginairy/rife-interpolation)
+63197c73d21ad55ddf2b6e5cc38d0a19a1e494317aefe2707c6b6c6fc952f3c7  checkpoints/latentsync_unet.pt
+b4afbbcfdb27cea6c71c7fcd2b4a3528d4bae800dff9ed5e757e015f1ed5c521  checkpoints/venhancer_v2-fp16.safetensors
+c5544dfda88abead0f713c3a79338a1eb0ac6a4573e1c5de76d21e2af3839555  checkpoints/rife-flownet-4.13.2.safetensors
+ef5c2bb989fce20ab39341db98adfbb3d072d9dc709b02391603755d433c1446  checkpoints/hunyuan-video-t2v-720p-Q4_K_M.gguf

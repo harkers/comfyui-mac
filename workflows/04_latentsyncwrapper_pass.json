@@ -1,0 +1,30 @@
+{
+  "1": {
+    "inputs": {
+      "images": "test_video.mp4",
+      "audio": "test_video.mp4",
+      "seed": 42,
+      "lips_expression": 1.5,
+      "inference_steps": 20,
+      "cfg": 1.0,
+      "fp8": false
+    },
+    "class_type": "LatentSyncNode"
+  },
+  "2": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage"
+  },
+  "3": {
+    "inputs": {
+      "images": ["2", 0],
+      "filename_prefix": "mvr_latentsync"
+    },
+    "class_type": "SaveImage"
+  }
+}

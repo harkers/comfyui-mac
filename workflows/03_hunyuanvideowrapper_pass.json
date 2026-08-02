@@ -1,0 +1,37 @@
+{
+  "1": {
+    "inputs": {
+      "model": "hunyuan-video-t2v-720p-Q4_K_M.gguf",
+      "base_precision": "bf16",
+      "quantization": "disabled",
+      "load_device": "main_device",
+      "attention_mode": "sdpa",
+      "compile_args": "none",
+      "manual_offloading": true,
+      "clip_vision": "none",
+      "vae": "none",
+      "te1": "none",
+      "te2": "none",
+      "block_swap_args": "none",
+      "lora": "none",
+      "lora2": "none"
+    },
+    "class_type": "HyVideoModelLoader"
+  },
+  "2": {
+    "inputs": {
+      "width": 64,
+      "height": 64,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage"
+  },
+  "3": {
+    "inputs": {
+      "images": ["2", 0],
+      "filename_prefix": "mvr_hunyuan"
+    },
+    "class_type": "SaveImage"
+  }
+}

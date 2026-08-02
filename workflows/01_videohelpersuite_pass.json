@@ -1,0 +1,26 @@
+{
+  "1": {
+    "inputs": {
+      "video": "test_video.mp4",
+      "force_rate": 0,
+      "custom_width": 256,
+      "custom_height": 256,
+      "frame_load_cap": 4,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+    },
+    "class_type": "VHS_LoadVideo"
+  },
+  "2": {
+    "inputs": {
+      "images": ["1", 0],
+      "frame_rate": 8,
+      "loop_count": 0,
+      "filename_prefix": "mvr_vhs",
+      "format": "image/gif",
+      "pingpong": false,
+      "save_output": true
+    },
+    "class_type": "VHS_VideoCombine"
+  }
+}
