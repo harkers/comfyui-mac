@@ -1,0 +1,24 @@
+# ComfyUI Custom Nodes for comfyui-mac
+# Apple Silicon (MPS) compatible only
+
+# 1. VideoHelperSuite
+comfyanonymous/ComfyUI-VideoHelperSuite
+
+# 2. ComfyUI-GGUF
+city96/ComfyUI-GGUF
+
+# 3. HunyuanVideoWrapper
+kijai/HunyuanVideoWrapper
+
+# 4. LatentSyncWrapper
+ShmuelRonen/ComfyUI-LatentSyncWrapper
+
+# 5. Frame-Interpolation
+Fannovel16/comfyui_frame_interpolation
+
+# 6. VEnhancer
+kijai/ComfyUI-VEnhancer
+
+# Dropped (no native MPS path):
+# - LTX-Video
+# - WanVideoWrapper
