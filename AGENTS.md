@@ -4,7 +4,7 @@
 
 ## Repo state
 
-**Greenfield.** Only `.opencode/` (OpenCode plugin config) and `.agents/skills/` exist. The actual project — a ComfyUI management toolkit for Apple Silicon — has not been scaffolded yet. The canonical implementation plan lives in `todo.md`.
+**Active development.** Tasks 1–8 complete (scaffold, preflight, memcheck, api, render, install, pull_models, stage1_verify). Tasks 9–11 (MVR workflows, final README, real hardware verification) are pending and require a live ComfyUI UI. The canonical implementation plan lives in `todo.md`.
 
 ## Two systems in one repo
 

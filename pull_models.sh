@@ -12,10 +12,10 @@ MODELS_DIR="$COMFYUI_HOME/models"
 
 # Each entry: "repo_id filename subdir"
 MODELS=(
-    "ShmuelRonen/LatentSync-lipsync-300M latentsync_300m.pt checkpoints"
-    "kijai/HunyuanVideo-gguf HunyuanVideo-Q4_K_M.gguf checkpoints"
-    "kijai/VEnhancer v enhancer.pt checkpoints"
-    "ShmuelRonen/LatentSync-lipsync-300M latentsync_test.mp4 input"
+    "ByteDance/LatentSync latentsync_unet.pt checkpoints"
+    "city96/HunyuanVideo-gguf hunyuan-video-t2v-720p-Q4_K_M.gguf checkpoints"
+    "Kijai/VEnhancer-fp16 v enhancer_v2-fp16.safetensors checkpoints"
+    "imaginairy/rife-interpolation rife-flownet-4.13.2.safetensors checkpoints"
 )
 
 SHA256_FILE="$SCRIPT_DIR/models.sha256"

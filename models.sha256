@@ -3,10 +3,10 @@
 # Format: <sha256sum>  <filename>
 # Populate after download completes
 
-# LatentSync
+# LatentSync (ByteDance/LatentSync)
 
-# HunyuanVideo-GGUF
+# HunyuanVideo-GGUF (city96/HunyuanVideo-gguf)
 
-# VEnhancer
+# VEnhancer (Kijai/VEnhancer-fp16)
 
-# RIFE (Frame Interpolation)
+# RIFE (imaginairy/rife-interpolation)

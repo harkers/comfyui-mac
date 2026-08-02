@@ -2,19 +2,19 @@
 # Apple Silicon (MPS) compatible only
 
 # 1. VideoHelperSuite
-comfyanonymous/ComfyUI-VideoHelperSuite
+Kosinkadink/ComfyUI-VideoHelperSuite
 
 # 2. ComfyUI-GGUF
 city96/ComfyUI-GGUF
 
 # 3. HunyuanVideoWrapper
-kijai/HunyuanVideoWrapper
+kijai/ComfyUI-HunyuanVideoWrapper
 
 # 4. LatentSyncWrapper
 ShmuelRonen/ComfyUI-LatentSyncWrapper
 
 # 5. Frame-Interpolation
-Fannovel16/comfyui_frame_interpolation
+Fannovel16/ComfyUI-Frame-Interpolation
 
 # 6. VEnhancer
 kijai/ComfyUI-VEnhancer

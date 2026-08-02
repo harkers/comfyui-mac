@@ -84,11 +84,11 @@
 ---
 
 ## Task 8: `stage1_verify.py` + tests
-- [ ] Write failing tests (`tests/test_stage1_verify.py`) — 4 tests
-- [ ] Run tests to verify they fail
-- [ ] Write implementation (`stage1_verify.py`)
-- [ ] Run tests to verify they pass (4 passed)
-- [ ] Commit
+- [x] Write failing tests (`tests/test_stage1_verify.py`) — 4 tests
+- [x] Run tests to verify they fail
+- [x] Write implementation (`stage1_verify.py`)
+- [x] Run tests to verify they pass (4 passed)
+- [x] Commit
 
 **Interface:** `run_stage1()`, `Stage1Result`, `write_verified_flag_if_passed()`
 
